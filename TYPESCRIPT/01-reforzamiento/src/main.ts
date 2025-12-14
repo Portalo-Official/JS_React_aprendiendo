@@ -2,12 +2,14 @@ import './style.css'
 
 
 // Se comentan imports para no ensuciar la console
-//import './01-const-let.ts';
-//import './02-object-literal.ts';
-//import './03-interfaces.ts';
-// import './04-arreglos'
-// import './05-funciones'
-import './06-callback'
+//import './bases/01-const-let.ts';
+//import './bases/02-object-literal.ts';
+//import './bases/03-interfaces.ts';
+// import './bases/04-arreglos'
+// import './bases/05-funciones'
+// import './bases/06-callback'
+// import './bases/07-desestructuracion'
+import './bases/08-Interfaces_y_Enums'
 
 
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
