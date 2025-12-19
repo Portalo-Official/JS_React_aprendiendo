@@ -9,7 +9,8 @@ import './style.css'
 // import './bases/05-funciones'
 // import './bases/06-callback'
 // import './bases/07-desestructuracion'
-import './bases/08-Interfaces_y_Enums'
+// import './bases/08-Interfaces_y_Enums'
+import './bases/09-import-export'
 
 
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
