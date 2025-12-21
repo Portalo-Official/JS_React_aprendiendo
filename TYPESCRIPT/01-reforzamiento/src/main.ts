@@ -11,7 +11,8 @@ import './style.css'
 // import './bases/07-desestructuracion'
 // import './bases/08-Interfaces_y_Enums'
 // import './bases/09-import-export'
-import './bases/10-promesas'
+// import './bases/10-promesas'
+import './bases/11-fetch-api'
 
 
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
