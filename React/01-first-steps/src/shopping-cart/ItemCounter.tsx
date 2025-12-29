@@ -1,4 +1,4 @@
-import  { type CSSProperties } from 'react';
+import  { useState, type CSSProperties } from 'react';
 
 const estilo: CSSProperties = {
      display: 'flex',
@@ -14,14 +14,30 @@ export interface ItemCounterProps {
 
 export const ItemCounter = (props: ItemCounterProps) => {
     
-    console.log(props);
-    
+    const [count, setCount] = useState(props.quantity || 1);
+
+    const handleAdd = () => {
+        setCount(count + 1);
+    }
+
+    const handleSubstract = () => {
+        if(count === 1) return;
+
+        setCount(count -1);
+    }
+ 
+
     return (
     <section style={estilo}>
         <span>{props.name}</span>
-        <button>+1</button>
-        <span>{props.quantity}</span>
-        <button>-1</button>
+
+        <button 
+        onClick={handleAdd}
+        >+1</button>
+        <span>{count}</span>
+        <button
+        onClick={handleSubstract}
+        >-1</button>
     </section>
     )
 }
