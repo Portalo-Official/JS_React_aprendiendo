@@ -16,7 +16,7 @@ export const ItemCounter = (props: ItemCounterProps) => {
     
     const [count, setCount] = useState(props.quantity || 1);
 
-    const textoRojo: CSSProperties = {
+    const styleConditionalTextRed: CSSProperties = {
         color: count === 1 ? 'red': 'white',
    }
 
@@ -34,11 +34,11 @@ export const ItemCounter = (props: ItemCounterProps) => {
     return (
     <section 
      className= {style['item-row']}
-    // style={estilo}
+    
     >
         <span
-        className={style['item-text']}
-        style={textoRojo}
+        className={style.itemText}
+        style={styleConditionalTextRed}
         >{props.name}</span>
 
         <button 
