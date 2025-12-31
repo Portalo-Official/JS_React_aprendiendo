@@ -1,11 +1,11 @@
-import  { useState, type CSSProperties } from 'react';
+import  {  type CSSProperties } from 'react';
+import  { useState } from 'react';
 
-const estilo: CSSProperties = {
-     display: 'flex',
-     alignContent: 'center',
-     gap: 10,
-     marginTop: 10,
-}
+// import './itemCounter.css'
+import style from'./itemCounter.module.css'
+
+
+
 
 export interface ItemCounterProps {
     name: string,
@@ -15,6 +15,10 @@ export interface ItemCounterProps {
 export const ItemCounter = (props: ItemCounterProps) => {
     
     const [count, setCount] = useState(props.quantity || 1);
+
+    const textoRojo: CSSProperties = {
+        color: count === 1 ? 'red': 'white',
+   }
 
     const handleAdd = () => {
         setCount(count + 1);
@@ -28,8 +32,14 @@ export const ItemCounter = (props: ItemCounterProps) => {
  
 
     return (
-    <section style={estilo}>
-        <span>{props.name}</span>
+    <section 
+     className= {style['item-row']}
+    // style={estilo}
+    >
+        <span
+        className={style['item-text']}
+        style={textoRojo}
+        >{props.name}</span>
 
         <button 
         onClick={handleAdd}
